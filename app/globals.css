@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-dark: #0F3B3A;
+  --color-bg-dark-2: #0C302F;
+  --color-accent: #C9A24A;
+  --color-accent-hover: #D9B563;
+  --color-accent-tint: #F4EEDF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: #AAC4C0;
+  --color-text-on-light: #12211F;
+  --color-border-dark: #1E4D4B;
+  --color-surface-light: #FFFFFF;
+  --color-surface-alt: #F5F3EC;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: theme("colors.gold");
+    color: theme("colors.ink");
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.gold-light");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  * {
+    outline-color: theme("colors.gold-light");
+  }
+}
+
+@layer utilities {
+  .mono-label {
+    @apply font-mono uppercase tracking-mono text-xs;
+  }
+
+  .container-px {
+    @apply px-6 sm:px-10 lg:px-16;
+  }
+}
+
+/* Lenis smooth-scroll recommended base rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Faint grain overlay */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+}
+
+/* Marquee ticker */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 42s linear infinite;
+}
+
+.marquee-track[data-paused="true"] {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
