@@ -71,7 +71,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-boardroom.jpg"
-          alt=""
+          alt="Professionals in a boardroom meeting, representing Enlivo Talent Solutions' BFSI and regulated-industry hiring work"
           fill
           priority
           sizes="100vw"

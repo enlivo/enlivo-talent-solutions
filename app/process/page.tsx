@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ProcessStepRow } from "@/components/sections/ProcessStepRow";
 import { MatchGlyph } from "@/components/ui/MatchGlyph";
 import { Button } from "@/components/ui/Button";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { processSteps } from "@/lib/processSteps";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Process | Enlivo Talent Solutions",
+export const metadata = buildMetadata({
+  title: "Our Hiring Process",
   description:
-    "How Enlivo hires: Brief, Source, Assess, Present, Place & Support. A five-step process you can actually track.",
-};
+    "A five-step, compliance-first hiring process for BFSI, NBFC, and insurance clients in India: brief, source, assess, present, and place with background-verified candidates.",
+  path: "/process",
+});
 
 export default function ProcessPage() {
   return (

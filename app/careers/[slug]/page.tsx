@@ -6,6 +6,8 @@ import { PageHeader } from "@/components/sections/PageHeader";
 import { ApplicationForm } from "@/components/sections/ApplicationForm";
 import { SectionTexture } from "@/components/ui/SectionTexture";
 import { openRoles } from "@/lib/careers";
+import { buildMetadata } from "@/lib/seo";
+import { buildJobPostingSchema } from "@/lib/jobPostingSchema";
 
 export function generateStaticParams() {
   return openRoles.map((role) => ({ slug: role.slug }));
@@ -19,25 +21,11 @@ export function generateMetadata({
   const role = openRoles.find((r) => r.slug === params.slug);
   if (!role) return {};
 
-  const title = `${role.title} | Enlivo Talent Solutions`;
-  const description = role.summary;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      siteName: "Enlivo Talent Solutions",
-      type: "website",
-      images: ["/images/logo-large.png"],
-    },
-    twitter: {
-      card: "summary",
-      title,
-      description,
-    },
-  };
+  return buildMetadata({
+    title: role.title,
+    description: `${role.summary} ${role.type} role based in ${role.location}. Apply at Enlivo Talent Solutions.`,
+    path: `/careers/${role.slug}`,
+  });
 }
 
 export default function JobPage({ params }: { params: { slug: string } }) {
@@ -46,6 +34,10 @@ export default function JobPage({ params }: { params: { slug: string } }) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJobPostingSchema(role)) }}
+      />
       <PageHeader eyebrow={role.department} lines={[role.title]} subhead={role.summary} />
 
       <section className="relative isolate bg-paper pb-28 lg:pb-36">

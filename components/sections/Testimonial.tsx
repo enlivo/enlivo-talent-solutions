@@ -30,7 +30,7 @@ export function Testimonial() {
               <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
                 <DuotoneImage
                   src="/images/testimonial-headshot.jpg"
-                  alt=""
+                  alt="Portrait of Enlivo's client testimonial contributor, Head of Talent Acquisition at a leading NBFC"
                   overlayOpacity={0.18}
                   className="h-full w-full"
                   sizes="48px"

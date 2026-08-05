@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { CareersList } from "@/components/sections/CareersList";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Careers | Enlivo Talent Solutions",
-  description: "Open roles at Enlivo Talent Solutions. Join the team.",
-};
+export const metadata = buildMetadata({
+  title: "Careers",
+  description:
+    "Join the Enlivo Talent Solutions team. We're hiring sourcing, client success, and operations talent to build BFSI and NBFC hiring pipelines across India.",
+  path: "/careers",
+});
 
 export default function CareersPage() {
   return (
@@ -18,6 +20,7 @@ export default function CareersPage() {
 
       <section className="bg-paper pb-28 lg:pb-36">
         <div className="container-px mx-auto max-w-content">
+          <h2 className="sr-only">Open Roles</h2>
           <CareersList />
         </div>
       </section>

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { CandidateInterestForm } from "@/components/sections/CandidateInterestForm";
 import { SectionTexture } from "@/components/ui/SectionTexture";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "For Candidates | Enlivo Talent Solutions",
+export const metadata = buildMetadata({
+  title: "For Candidates",
   description:
-    "We're actively building talent pipelines across BFSI, fintech, and technology. Register your interest and we'll reach out when a matching opportunity opens.",
-};
+    "Register your interest with Enlivo Talent Solutions. We're building talent pipelines across BFSI, fintech, and technology, and reach out when a matching role opens.",
+  path: "/candidates",
+});
 
 export default function CandidatesPage() {
   return (

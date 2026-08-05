@@ -46,12 +46,14 @@ export function CareersList() {
           >
             <div>
               <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href={`/careers/${role.slug}`}
-                  className="font-display text-xl font-medium text-ink transition-colors hover:text-gold-deep"
-                >
-                  {role.title}
-                </Link>
+                <h3 className="font-display text-xl font-medium text-ink">
+                  <Link
+                    href={`/careers/${role.slug}`}
+                    className="transition-colors hover:text-gold-deep"
+                  >
+                    {role.title}
+                  </Link>
+                </h3>
                 <span className="mono-label rounded-full border border-line px-2.5 py-1 text-[10px] text-ink-soft">
                   {role.department}
                 </span>

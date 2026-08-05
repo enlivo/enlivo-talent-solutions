@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | Enlivo Talent Solutions",
-  description: "Hiring for a regulated business? Get in touch with Enlivo Talent Solutions.",
-};
+export const metadata = buildMetadata({
+  title: "Contact Us",
+  description:
+    "Get in touch with Enlivo Talent Solutions for BFSI, NBFC, and insurance hiring needs. Executive search, permanent staffing, contract staffing, and RPO across India.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

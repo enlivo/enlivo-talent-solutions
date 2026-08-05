@@ -61,7 +61,7 @@ export function Nav() {
               href="/"
               className="flex items-center gap-3 rounded-lg border border-gold/50 px-3 py-1.5"
             >
-              <Image src="/images/logo-nav.png" alt="Enlivo" width={30} height={30} priority />
+              <Image src="/images/logo-nav.png" alt="Enlivo Talent Solutions logo" width={30} height={30} priority />
               <span className="flex flex-col leading-none">
                 <span className="font-display text-lg font-medium">Enlivo</span>
                 <motion.span

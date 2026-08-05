@@ -33,7 +33,7 @@ export function RegulatedHiringStrip() {
     <section className="relative isolate bg-paper-dim py-20 lg:py-24">
       <SectionTexture corner="bottom-right" />
       <div className="relative z-10 container-px mx-auto max-w-content">
-        <Eyebrow>Built for Regulated Hiring</Eyebrow>
+        <Eyebrow as="h2">Built for Regulated Hiring</Eyebrow>
 
         <InViewGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (

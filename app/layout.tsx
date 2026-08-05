@@ -28,11 +28,36 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://enlivotalentsolutions.com";
+const SITE_NAME = "Enlivo Talent Solutions";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.enlivotalent.com"),
-  title: "Enlivo Talent Solutions | Hiring for Regulated Industries",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Enlivo Talent Solutions | BFSI Recruitment & Executive Search India",
+    template: "%s | Enlivo Talent Solutions",
+  },
   description:
-    "Enlivo Talent Solutions places background-verified talent for BFSI, NBFC, and insurance clients. Executive search, permanent staffing, contract staffing, and RPO, built around your compliance requirements.",
+    "Enlivo Talent Solutions places background-verified talent for BFSI, NBFC, and insurance clients across India. Executive search, permanent staffing, contract staffing, and RPO, built around your compliance requirements.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    url: SITE_URL,
+    title: "Enlivo Talent Solutions | BFSI Recruitment & Executive Search India",
+    description:
+      "Background-verified talent for BFSI, NBFC, and insurance clients across India. Executive search, permanent staffing, contract staffing, and RPO.",
+    images: ["/images/logo-large.png"],
+  },
+  twitter: {
+    card: "summary",
+    title: "Enlivo Talent Solutions | BFSI Recruitment & Executive Search India",
+    description:
+      "Background-verified talent for BFSI, NBFC, and insurance clients across India. Executive search, permanent staffing, contract staffing, and RPO.",
+    images: ["/images/logo-large.png"],
+  },
 };
 
 export default function RootLayout({

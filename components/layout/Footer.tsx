@@ -35,7 +35,7 @@ export function Footer() {
         <div className="grid gap-12 border-b border-line-on-teal pb-16 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image src="/images/logo-large.png" alt="Enlivo" width={56} height={56} />
+              <Image src="/images/logo-large.png" alt="Enlivo Talent Solutions logo" width={56} height={56} />
               <span className="font-display text-lg font-medium text-on-teal">
                 Enlivo Talent Solutions
               </span>

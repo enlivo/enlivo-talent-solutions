@@ -39,7 +39,7 @@ export function Services() {
         <div className="relative mb-12 h-48 w-full overflow-hidden rounded-2xl lg:h-64">
           <DuotoneImage
             src="/images/services-banner.jpg"
-            alt=""
+            alt="Corporate team collaborating in an office, representing Enlivo's executive search and staffing services"
             overlayOpacity={0.78}
             className="h-full w-full"
           />
