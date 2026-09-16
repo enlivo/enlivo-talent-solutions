@@ -40,9 +40,6 @@ export function Footer() {
                 Enlivo Talent Solutions
               </span>
             </div>
-            <p className="mt-5 max-w-xs text-sm text-on-teal/60">
-              A product of Enlivo Global Tech Solutions Private Limited.
-            </p>
             <div className="mt-8 space-y-1 text-sm text-on-teal/60">
               <p>akshay@enlivotalentsolutions.com</p>
               <p>contact@enlivotalentsolutions.com</p>

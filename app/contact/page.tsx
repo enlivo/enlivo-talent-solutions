@@ -26,9 +26,6 @@ export default function ContactPage() {
               <p className="font-display text-base font-medium text-ink">
                 Enlivo Talent Solutions
               </p>
-              <p className="mt-1 text-sm text-ink-soft/70">
-                A product of Enlivo Global Tech Solutions Private Limited
-              </p>
             </div>
             <div className="mt-4 space-y-1 text-ink-soft">
               <p>#31 Srushti, Krishnagiri Police Colony, Vinayaka Layout, Kodipaly, Kengeri, Bengaluru - 560060</p>
