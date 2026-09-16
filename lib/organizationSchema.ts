@@ -20,8 +20,10 @@ export const organizationSchema = {
   },
   address: {
     "@type": "PostalAddress",
+    streetAddress: "#31 Srushti, Krishnagiri Police Colony, Vinayaka Layout, Kodipaly, Kengeri",
     addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
+    postalCode: "560060",
     addressCountry: "IN",
   },
 };

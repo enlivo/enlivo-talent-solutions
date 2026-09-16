@@ -31,7 +31,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="mt-4 space-y-1 text-ink-soft">
-              <p>Bengaluru, India</p>
+              <p>#31 Srushti, Krishnagiri Police Colony, Vinayaka Layout, Kodipaly, Kengeri, Bengaluru - 560060</p>
               <p className="mt-3">akshay@enlivotalentsolutions.com</p>
               <p>contact@enlivotalentsolutions.com</p>
               <p className="mt-3">+91 78993 87578</p>
